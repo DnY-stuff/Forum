@@ -1,0 +1,17 @@
+Forum Project releasenote
+
+
+BUILD 1.0.0.0
+====================================
+
+[Note]
+	-. 
+
+
+[NEW]
+
+	
+[CHANGES]
+
+	
+[REQUIRE]

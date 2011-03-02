@@ -1,0 +1,25 @@
+﻿# Infrastructure layer guideline
+
+모든 Layer에서 사용하게 될 Infrastructure입니다.
+공용으로 사용될, 유틸리티 및 헬퍼 클래스로 구성합니다.
+Common Library 혹은 3rd party Library등도 이곳에서 Warpping하여 제공할 것을 권장합니다.
+
+-----------------------------------------------------------------------------------------
+
+## 프로젝트 트리
+
+[Builders]
+	*. Builder Classes
+
+[Log]
+	*. Logging Interface
+	*. 특정 Log 라이브러리를 Proxy로 사용토록 합니다.
+
+[Messaging]
+	*. TODO : ESB를 인지한 후, 이 폴더의 역할을 파악한 후 기재
+
+[Utils]
+	*. Utility Classes
+
+[Validations]
+	*. Validation 제공 클래스

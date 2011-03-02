@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<nlog autoReload="true" throwExceptions="true" xmlns="http://www.nlog-project.org/schemas/NLog.netfx40.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<variable name="logDirectory" value="${basedir}/logs" />
+	<variable name="logFilename" value="DnY.Forum.Spec" />
+	<variable name="defaultLayout" value="${longdate} [${threadid}] [${level}] [${logger}]# ${message} ${exception:format=tostring}"/>
+	<!--<variable name="defaultLayout" value="${longdate} [${threadid}] [${level}] [${logger}] [${callsite}]# ${message} ${exception:format=tostring}"/>-->
+
+	<targets async="false">
+
+		<!-- 참고 : http://nlog-project.org/wiki/Configuration_file, http://nlog-project.org/wiki/File_target -->
+
+    <!-- TODO : Common.Logging.NLog의 NLog 하위버전 참조에 따른 prototype의 불일치로 parsing이 불가능 -->
+    <!-- Route Common.Logging messages to NLog -->
+    <!--<target name="common.logging"
+          xsi:type="Common.Logging.NLog.CommonLoggingTarget, Common.Logging.NLog"
+          fileName="${logDirectory}/${logFilename}-${shortdate}.log"
+          layout="${defaultLayout}" />-->
+    
+		<target name="console" xsi:type="Console" layout="${defaultLayout}" />
+    
+    <target name="trace" xsi:type="Trace" layout="${defaultLayout}" />
+
+		<target name="file"
+				xsi:type="File"
+				fileName="${logDirectory}/${logFilename}.log"
+				layout="${defaultLayout}"
+				encoding="utf-8"/>
+
+		<target name="fileByDay"
+				xsi:type="File"
+				fileName="${logDirectory}/${logFilename}-${shortdate}.log"
+				layout="${defaultLayout}"
+				encoding="utf-8" />
+
+		<!-- 파일크기와 일자별로 구분-->
+		<target name="rollingFile"
+				xsi:type="File"
+				fileName="${logDirectory}/${logFilename}-${shortdate}.log"
+				archiveFileName="${logDirectory}/${logFilename}-${shortdate}-{##}.log"
+				archiveAboveSize="4096000"
+				archiveNumbering="Rolling"
+				archiveEvery="Day"
+				maxArchiveFiles="7"
+				concurrentWrites="true"
+				keepFileOpen="false"
+				layout="${defaultLayout}"
+				encoding="utf-8" />
+    
+  </targets>
+
+	<rules>
+		<logger name="DnY.Forum.Infrastructure.*" minlevel="Info" writeTo="console, fileByDay" />
+	  <logger name="*" minlevel="Trace" writeTo="console, fileByDay" />
+	</rules>
+
+</nlog>
+

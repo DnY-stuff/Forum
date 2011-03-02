@@ -1,0 +1,18 @@
+﻿# Domain layer guideline
+
+순수한 Domain용 프로젝트입니다.
+
+-----------------------------------------------------------------------------------------
+
+## 프로젝트 트리
+
+[Model]
+	*. Domain의 각 Aggregate별로 폴더를 구성합니다.
+	*. Entity 폴더내에, Model/Factory/IEntityRepository를 구성합니다.
+
+[Service]
+	*. TODO : Domain Servic를 명확히 인지한 후 작성할 것.
+
+[Shared]
+	*. [Model]클래스에서 사용될, Domain의 속성클래스들로 구성(ReferenceObject/ValueObject 등)
+	*. TODO : 명확히 인지한 후 작성할 것.

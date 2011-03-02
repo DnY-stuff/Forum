@@ -1,0 +1,13 @@
+﻿# Application layer guideline
+
+Application을 구성하는 Service집합 layer입니다.
+
+-----------------------------------------------------------------------------------------
+
+## 프로젝트 트리
+
+[.]
+	*. Application Service Interface를 구성합니다.
+
+[Impl]
+	*. Interface Implementor를 구성합니다.

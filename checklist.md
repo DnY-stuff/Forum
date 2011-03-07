@@ -1,5 +1,5 @@
-﻿CHECKLIST
-=========
+﻿CHECK LIST
+==========
 
 For Commit / Push
 ---------------------------

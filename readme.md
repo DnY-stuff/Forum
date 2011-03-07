@@ -5,6 +5,12 @@
 Development log
 ---------------
 
+####2011-03-08
+
+[Notes]
+
+* Domain Class / Repository Interface 작성
+
 ####2011-03-03
 
 [Notes]

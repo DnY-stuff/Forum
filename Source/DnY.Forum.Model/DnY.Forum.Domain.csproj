@@ -34,10 +34,17 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Account\Email.cs" />
+    <Compile Include="Model\Account\IMemberRepository.cs" />
+    <Compile Include="Model\Account\Member.cs" />
+    <Compile Include="Model\Forum\Forum.cs" />
+    <Compile Include="Model\Forum\IForumRepository.cs" />
+    <Compile Include="Model\Thread\IThreadRepository.cs" />
+    <Compile Include="Model\Thread\Post.cs" />
+    <Compile Include="Model\Thread\Thread.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Model\" />
     <Folder Include="Service\" />
     <Folder Include="Shared\" />
   </ItemGroup>

@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace DnY.Forum.Domain.Model
 {
     using Machine.Specifications;
@@ -6,7 +8,13 @@ namespace DnY.Forum.Domain.Model
     [Subject(typeof(Forum)), Tags("Domain.Entity")]
     public class when_created_new_forum
     {
-        Because of = () => NewForum = new Forum();
+        Establish context = () =>
+                                {
+                                    Moderator = new List<Member> {new Member()};
+                                };
+
+
+        Because of = () => NewForum = new Forum("Forum 이용관련", Moderator);
         
         It should_not_be_the_title_empty = () => NewForum.Title.ShouldNotBeEmpty();
         It should_exist_one_moderator_at_least = () =>
@@ -16,5 +24,6 @@ namespace DnY.Forum.Domain.Model
                                                     };
 
         private static Forum NewForum;
+        private static IList<Member> Moderator;
     }
 }

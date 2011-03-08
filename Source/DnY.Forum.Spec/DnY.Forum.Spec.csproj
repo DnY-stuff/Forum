@@ -87,6 +87,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Domain\Model\Forum\ForumSpec.cs" />
+    <Compile Include="Domain\Model\Forum\ThreadSpec.cs" />
     <Compile Include="Framework\AutoMockFactory.cs" />
     <Compile Include="Framework\ClassUnderTest.cs" />
     <Compile Include="Framework\Sample\Specifications.AutoMock.cs" />
@@ -104,7 +106,7 @@
     <Compile Include="Framework\SpecificationFor.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Domain\Model\" />
+    <Folder Include="Domain\Model\Account\" />
     <Folder Include="Infrastructure\Messaging\" />
     <Folder Include="Infrastructure\Persistence\Inmemory\" />
     <Folder Include="Infrastructure\Routing\" />

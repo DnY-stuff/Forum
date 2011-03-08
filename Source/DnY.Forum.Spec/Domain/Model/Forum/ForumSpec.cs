@@ -6,7 +6,15 @@ namespace DnY.Forum.Domain.Model
     [Subject(typeof(Forum)), Tags("Domain.Entity")]
     public class when_created_new_forum
     {
-        It should_not_be_the_title_empty;
-        It should_exist_one_moderator_at_least;
+        Because of = () => NewForum = new Forum();
+        
+        It should_not_be_the_title_empty = () => NewForum.Title.ShouldNotBeEmpty();
+        It should_exist_one_moderator_at_least = () =>
+                                                    {
+                                                        NewForum.Moderators.ShouldNotBeNull();
+                                                        NewForum.Moderators.ShouldNotBeEmpty();
+                                                    };
+
+        private static Forum NewForum;
     }
 }

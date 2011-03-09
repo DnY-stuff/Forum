@@ -34,9 +34,9 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\Account\Email.cs" />
     <Compile Include="Model\Account\IMemberRepository.cs" />
     <Compile Include="Model\Account\Member.cs" />
+    <Compile Include="Model\Account\MemberType.cs" />
     <Compile Include="Model\Forum\Forum.cs" />
     <Compile Include="Model\Forum\IForumRepository.cs" />
     <Compile Include="Model\Thread\IThreadRepository.cs" />

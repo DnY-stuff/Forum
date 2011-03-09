@@ -8,11 +8,7 @@ namespace DnY.Forum.Domain.Model
     [Subject(typeof(Forum)), Tags("Domain.Entity")]
     public class when_created_new_forum
     {
-        Establish context = () =>
-                                {
-                                    Moderator = new List<Member> {new Member()};
-                                };
-
+        Establish context = () => Moderator = new List<Member> { new Member("dkshin67@gmail.com", "password", "Dongkyu Shin") };
 
         Because of = () => NewForum = new Forum("Forum 이용관련", Moderator);
         

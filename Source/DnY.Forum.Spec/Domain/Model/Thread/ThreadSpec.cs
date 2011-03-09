@@ -10,9 +10,9 @@ namespace DnY.Forum.Domain.Model
     {
         Establish context = () =>
                                 {
-                                    OriginalPostWriter = new Member();
+                                    OriginalPostWriter = new Member("dkshin67@gmail.com", "password", "Dongkyu Shin");
                                     OriginalPost = new Post("환영합니다.", "blah~blah~blah~blah~blah~", OriginalPostWriter);
-                                    CurrentForum = new Forum("임시 포럼", new List<Member>{new Member()});
+                                    CurrentForum = new Forum("임시 포럼", new List<Member> { new Member("administrator@dny.com", "password", "Administrator") });
                                 };
 
         Because of = () => NewThread = new Thread(OriginalPost, CurrentForum);

@@ -10,9 +10,6 @@ Development log
 [Notes]
 
 * Forum/Thread Entity 도메인로직 구현 / 테스트
-
-[Todo]
-
 * Account 도메인로직 구현 / 테스트
 
 ####2011-03-08

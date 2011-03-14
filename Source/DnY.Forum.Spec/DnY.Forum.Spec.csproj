@@ -87,6 +87,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Application\AccountServiceSpec.cs" />
+    <Compile Include="Application\AuthorityServiceSpec.cs" />
+    <Compile Include="Application\ForumServiceSpec.cs" />
     <Compile Include="Domain\Model\Account\MemberSpec.cs" />
     <Compile Include="Domain\Model\Forum\ForumSpec.cs" />
     <Compile Include="Domain\Model\Thread\ThreadSpec.cs" />

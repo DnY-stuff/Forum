@@ -37,11 +37,12 @@
     <Compile Include="IAccountService.cs" />
     <Compile Include="IAuthorityService.cs" />
     <Compile Include="IForumService.cs" />
+    <Compile Include="Impl\AccountService.cs" />
+    <Compile Include="Impl\AuthorityService.cs" />
+    <Compile Include="Impl\ForumService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Impl\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\DnY.Forum.Infrastructure\DnY.Forum.Infrastructure.csproj">
       <Project>{0A00EA69-5333-4CBB-98F2-3C28AD29B14D}</Project>

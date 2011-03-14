@@ -10,6 +10,7 @@ Development log
 [Notes]
 
 * 계정/포럼 관련서비스 Interface 작성
+* 권한서비스 구현 / 테스트
 
 ####2011-03-09
 

@@ -5,7 +5,7 @@ namespace DnY.Forum.Application
     using Machine.Specifications;
     using It = Machine.Specifications.It;
 
-    [Subject(typeof(AuthorityService)), Tags("Application")]
+    [Subject(typeof(AuthorityService)), Tags("Application.AuthorityService")]
     public class when_given_a_user_as_administrator : SpecificationFor<AuthorityService>
     {
         Establish context = () => administrator = new Member("aaa@gmail.com", "1111", "Dongkyu Shin") {Type = MemberType.Administrator};
@@ -17,7 +17,7 @@ namespace DnY.Forum.Application
         private static Member administrator;
     }
 
-    [Subject(typeof(AuthorityService)), Tags("Application")]
+    [Subject(typeof(AuthorityService)), Tags("Application.AuthorityService")]
     public class when_given_a_user_as_moderator : SpecificationFor<AuthorityService>
     {
         Establish context = () => moderator = new Member("aaa@gmail.com", "1111", "Dongkyu Shin") { Type = MemberType.Moderator };
@@ -29,7 +29,7 @@ namespace DnY.Forum.Application
         private static Member moderator;
     }
 
-    [Subject(typeof(AuthorityService)), Tags("Application")]
+    [Subject(typeof(AuthorityService)), Tags("Application.AuthorityService")]
     public class when_given_a_user_as_member : SpecificationFor<AuthorityService>
     {
         Establish context = () => member = new Member("aaa@gmail.com", "1111", "Dongkyu Shin") { Type = MemberType.Member };

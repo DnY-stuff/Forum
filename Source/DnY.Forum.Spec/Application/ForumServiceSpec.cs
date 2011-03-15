@@ -10,8 +10,6 @@ namespace DnY.Forum.Application
     public class when_user_as_administrator_try_to_create_new_forum : with_forum_service
     {
         It should_create_new_forum;
-        It should_involve_opeartion_that_its_threads_become_a_empty_list;
-        It should_involve_opeartion_that_its_moderator_assgiend_one_user_at_least;
     }
 
     [Subject(typeof(ForumService)), Tags("Application.ForumService")]
@@ -24,7 +22,6 @@ namespace DnY.Forum.Application
     public class when_user_as_administrator_try_to_delete_forum : with_forum_service
     {
         It should_delete_forum;
-        It should_involve_operation_that_its_threads_become_a_empty;
     }
 
     [Subject(typeof(ForumService)), Tags("Application.ForumService")]

@@ -1,9 +1,9 @@
-using System;
-using System.Collections.Generic;
-using DnY.Forum.Domain.Model;
-
 namespace DnY.Forum.Application
 {
+    using System;
+    using System.Collections.Generic;
+    using Domain.Model;
+
     public class ForumService : IForumService
     {
         #region Implementation of IForumService
@@ -15,7 +15,7 @@ namespace DnY.Forum.Application
         /// <param name="title">力格</param>
         /// <param name="description">汲疙</param>
         /// <returns>积己等 器烦</returns>
-        public Domain.Model.Forum CreateForum(Member creator, string title, string description)
+        public Forum CreateForum(Member creator, string title, string description)
         {
             throw new NotImplementedException();
         }

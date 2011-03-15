@@ -34,7 +34,7 @@ namespace DnY.Forum.Application
         /// 모든 포럼을 조회합니다.
         /// </summary>
         /// <returns>조회된 포럼 목록</returns>
-        public IList<Domain.Model.Forum> FindAllForum()
+        public IList<Forum> FindAllForum()
         {
             throw new NotImplementedException();
         }
@@ -44,7 +44,7 @@ namespace DnY.Forum.Application
         /// </summary>
         /// <param name="forum">포럼</param>
         /// <returns>조회된 글타래 목록</returns>
-        public IList<Thread> FindAllThreadByForum(Domain.Model.Forum forum)
+        public IList<Thread> FindAllThreadByForum(Forum forum)
         {
             throw new NotImplementedException();
         }
@@ -68,7 +68,7 @@ namespace DnY.Forum.Application
         /// <param name="content">본문</param>
         /// <param name="description">설명</param>
         /// <returns>생성된 글타래</returns>
-        public Thread CreateNewThread(Member creator, Domain.Model.Forum forum, string title, string content, string description)
+        public Thread CreateNewThread(Member creator, Forum forum, string title, string content, string description)
         {
             throw new NotImplementedException();
         }
@@ -106,7 +106,7 @@ namespace DnY.Forum.Application
         /// <param name="moderator">중재자</param>
         /// <param name="thread">글타래</param>
         /// <param name="forumToMove">이동시킬 포럼</param>
-        public void MoveThreadToForum(Member moderator, Thread thread, Domain.Model.Forum forumToMove)
+        public void MoveThreadToForum(Member moderator, Thread thread, Forum forumToMove)
         {
             throw new NotImplementedException();
         }

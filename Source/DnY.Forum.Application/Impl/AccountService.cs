@@ -5,6 +5,13 @@ namespace DnY.Forum.Application
 {
     public class AccountService : IAccountService
     {
+        private IMemberRepository _memberRepository { get; set; }
+
+        public AccountService(IMemberRepository memberRepository)
+        {
+            _memberRepository = memberRepository;
+        }
+
         #region Implementation of IAccountService
 
         /// <summary>

@@ -6,6 +6,19 @@ namespace DnY.Forum.Application
 
     public class ForumService : IForumService
     {
+        protected IForumRepository _forumRepository { get; set; }
+        protected IMemberRepository _memberRepository { get; set; }
+        protected IAuthorityService _authorityService { get; set; }
+
+        public ForumService(IForumRepository forumRepository,
+                            IMemberRepository memberRepository,
+                            IAuthorityService authorityService)
+        {
+            _forumRepository = forumRepository;
+            _memberRepository = memberRepository;
+            _authorityService = authorityService;
+        }
+
         #region Implementation of IForumService
 
         /// <summary>

@@ -40,6 +40,9 @@
     <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\ErrorMessageViewModel.cs" />
+    <Compile Include="Controllers\MessageSource.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -93,17 +96,12 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DnY.Forum.Infrastructure\DnY.Forum.Infrastructure.csproj">
       <Project>{0A00EA69-5333-4CBB-98F2-3C28AD29B14D}</Project>
       <Name>DnY.Forum.Infrastructure</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DnY.Forum.Web.Controllers\DnY.Forum.Web.Controllers.csproj">
-      <Project>{E930303E-0F9F-42E2-B01D-2B141BBB820F}</Project>
-      <Name>DnY.Forum.Web.Controllers</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

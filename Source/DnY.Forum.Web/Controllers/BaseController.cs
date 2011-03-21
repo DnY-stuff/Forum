@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Web.Mvc;
 
 namespace DnY.Forum.Web.Controllers
 {
-    using System.Web.Mvc;
-
     public abstract class BaseController : Controller
     {
         protected override void OnActionExecuting(ActionExecutingContext filterContext)

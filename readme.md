@@ -5,6 +5,12 @@
 Development log
 ---------------
 
+####2011-03-21
+
+[Notes]
+
+* Web.Controller 프로젝트 삭제 => Web 프로젝트로 병합
+
 ####2011-03-14
 
 [Notes]

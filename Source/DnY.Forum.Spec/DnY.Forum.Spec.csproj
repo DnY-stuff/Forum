@@ -133,10 +133,6 @@
       <Project>{5180C33F-E3FC-4A2C-99CD-E59813933E6B}</Project>
       <Name>DnY.Forum.Persistence.NHibernate</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DnY.Forum.Web.Controllers\DnY.Forum.Web.Controllers.csproj">
-      <Project>{E930303E-0F9F-42E2-B01D-2B141BBB820F}</Project>
-      <Name>DnY.Forum.Web.Controllers</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="hibernate.cfg.xml">

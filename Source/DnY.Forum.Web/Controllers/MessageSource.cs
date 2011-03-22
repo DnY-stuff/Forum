@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-
-namespace DnY.Forum.Web.Controllers
+﻿namespace DnY.Forum.Web.Controllers
 {
+    using System.Collections.Generic;
+
     public static class MessageSource
     {
         private static readonly Dictionary<string, string> _messages;

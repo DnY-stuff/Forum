@@ -45,6 +45,8 @@
     <Compile Include="Controllers\ErrorMessageViewModel.cs" />
     <Compile Include="Controllers\ForumController.cs" />
     <Compile Include="Controllers\MessageSource.cs" />
+    <Compile Include="Controllers\PostController.cs" />
+    <Compile Include="Controllers\ThreadController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -101,6 +103,10 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DnY.Forum.Application\DnY.Forum.Application.csproj">
+      <Project>{8B0425B8-8FF2-4573-8F4E-E2BF893BD073}</Project>
+      <Name>DnY.Forum.Application</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DnY.Forum.Infrastructure\DnY.Forum.Infrastructure.csproj">
       <Project>{0A00EA69-5333-4CBB-98F2-3C28AD29B14D}</Project>
       <Name>DnY.Forum.Infrastructure</Name>

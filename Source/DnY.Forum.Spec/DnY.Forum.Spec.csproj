@@ -106,6 +106,8 @@
     <Compile Include="Infrastructure\Persistence\NHibernate\with_nhibernate_sqlite.cs" />
     <Compile Include="Infrastructure\Utils\DateTimeUtilSpec.cs" />
     <Compile Include="Infrastructure\Utils\FileUtilSpec.cs" />
+    <Compile Include="Presentation\AccountControllerSpec.cs" />
+    <Compile Include="Presentation\ForumControllerSpec.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Framework\SpecificationFor.cs" />
   </ItemGroup>
@@ -113,7 +115,6 @@
     <Folder Include="Infrastructure\Messaging\" />
     <Folder Include="Infrastructure\Persistence\Inmemory\" />
     <Folder Include="Infrastructure\Routing\" />
-    <Folder Include="Presentation\" />
     <Folder Include="Scenarios\" />
   </ItemGroup>
   <ItemGroup>
@@ -132,6 +133,10 @@
     <ProjectReference Include="..\DnY.Forum.Persistence.NHibernate\DnY.Forum.Persistence.NHibernate.csproj">
       <Project>{5180C33F-E3FC-4A2C-99CD-E59813933E6B}</Project>
       <Name>DnY.Forum.Persistence.NHibernate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DnY.Forum.Web\DnY.Forum.Web.csproj">
+      <Project>{B6EB1FEA-0ED6-4610-B4C7-4B93BCCAEB57}</Project>
+      <Name>DnY.Forum.Web</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

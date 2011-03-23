@@ -46,6 +46,17 @@ namespace DnY.Forum.Web.Controllers
         }
 
         /// <summary>
+        /// 계정을 삭제합니다.
+        /// </summary>
+        /// <param name="userId">사용자 Id</param>
+        /// <returns></returns>
+        [AcceptVerbs(HttpVerbs.Post)]
+        public ActionResult Remove(Guid userId)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
         /// 로그인합니다.
         /// </summary>
         /// <returns></returns>

@@ -5,8 +5,9 @@ namespace DnY.Forum.Domain.Model
 {
     public interface IForumRepository
     {
-        Forum Find(Guid id);
+        Forum Find(Guid forumId);
         IList<Forum> FindAll();
         void Store(Forum forum);
+        void Delete(Guid forumId);
     }
 }

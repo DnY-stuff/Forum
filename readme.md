@@ -5,6 +5,12 @@
 Development log
 ---------------
 
+####2011-03-23
+
+[Notes]
+
+* MVC Controller Specification 작성
+
 ####2011-03-21
 
 [Notes]

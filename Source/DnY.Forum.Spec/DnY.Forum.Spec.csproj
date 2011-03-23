@@ -109,6 +109,8 @@
     <Compile Include="Infrastructure\Utils\FileUtilSpec.cs" />
     <Compile Include="Presentation\AccountControllerSpec.cs" />
     <Compile Include="Presentation\ForumControllerSpec.cs" />
+    <Compile Include="Presentation\PostControllerSpec.cs" />
+    <Compile Include="Presentation\ThreadControllerSpec.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Framework\SpecificationFor.cs" />
   </ItemGroup>

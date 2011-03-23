@@ -69,31 +69,7 @@ namespace DnY.Forum.Web.Controllers
         /// </summary>
         /// <param name="forumId">포럼 Id</param>
         /// <returns></returns>
-        public ActionResult Index(Guid forumId)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// 새로운 글타래를 생성합니다.
-        /// </summary>
-        /// <param name="forumId">포럼 Id</param>
-        /// <returns></returns>
-        public ActionResult Create(Guid forumId)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// 새로운 글타래를 생성합니다.
-        /// </summary>
-        /// <param name="forumId">포럼Id</param>
-        /// <param name="title">제목</param>
-        /// <param name="content">본문</param>
-        /// <param name="description">설명</param>
-        /// <returns></returns>
-        [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult Create(Guid forumId, string title, string content, string description)
+        public ActionResult Details(Guid forumId)
         {
             throw new NotImplementedException();
         }

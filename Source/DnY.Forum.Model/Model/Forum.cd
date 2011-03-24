@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Thread Aggregate">
+    <Position X="6.323" Y="4.458" Height="0.291" Width="1.294" />
+  </Comment>
+  <Comment CommentText="Forum Aggregate">
+    <Position X="4.865" Y="0.573" Height="0.291" Width="1.294" />
+  </Comment>
+  <Comment CommentText="Member Aggregate">
+    <Position X="1.344" Y="0.542" Height="0.291" Width="1.387" />
+  </Comment>
+  <Class Name="DnY.Forum.Domain.Model.Member">
+    <Position X="1.25" Y="1" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAASAAAAAEgAAAAAQAAAAAAIACAQABAAAAAAA=</HashCode>
+      <FileName>Model\Account\Member.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DnY.Forum.Domain.Model.Forum">
+    <Position X="4.75" Y="1" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="Threads" Type="DnY.Forum.Domain.Model.Thread">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.88" Y="0.143" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAACIAAAAQAoAEAEgAAAAAAAAAAAAIAAAAABAAAAAAA=</HashCode>
+      <FileName>Model\Forum\Forum.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Moderators" />
+      <Property Name="Threads" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DnY.Forum.Domain.Model.Thread">
+    <Position X="4.75" Y="5.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAQAgAAEEgAAAAAAAAAAAAIAAAAABAAAIAAE=</HashCode>
+      <FileName>Model\Thread\Thread.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="OriginalPost" />
+      <Property Name="CurrentForum" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Replies" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DnY.Forum.Domain.Model.Post">
+    <Position X="7.75" Y="5.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAwAAAEAEgAAAAAAAAAAAAIAAAAABAAEAAAA=</HashCode>
+      <FileName>Model\Thread\Post.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Malgun Gothic" Size="9" />
+</ClassDiagram>

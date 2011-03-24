@@ -93,7 +93,6 @@
     <Compile Include="Application\ForumServiceSpec.cs" />
     <Compile Include="Domain\Model\Account\MemberSpec.cs" />
     <Compile Include="Domain\Model\Forum\ForumSpec.cs" />
-    <Compile Include="Domain\Model\SampleDataGenerator.cs" />
     <Compile Include="Domain\Model\Thread\ThreadSpec.cs" />
     <Compile Include="Framework\AutoMockFactory.cs" />
     <Compile Include="Framework\ClassUnderTest.cs" />

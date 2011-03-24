@@ -24,18 +24,12 @@
     <Compartments>
       <Compartment Name="Methods" Collapsed="true" />
     </Compartments>
-    <AssociationLine Name="Threads" Type="DnY.Forum.Domain.Model.Thread">
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="-0.88" Y="0.143" />
-      </MemberNameLabel>
-    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAACIAAAAQAoAEAEgAAAAAAAAAAAAIAAAAABAAAAAAA=</HashCode>
+      <HashCode>AAACIAAAAQAgAEAEgAAAAAAAAAAAAIAAAAABAAAAAAA=</HashCode>
       <FileName>Model\Forum\Forum.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
       <Property Name="Moderators" />
-      <Property Name="Threads" />
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="DnY.Forum.Domain.Model.Thread">

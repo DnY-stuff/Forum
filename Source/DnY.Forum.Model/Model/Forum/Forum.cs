@@ -25,11 +25,6 @@ namespace DnY.Forum.Domain.Model
         public string Description { get; set; }
 
         /// <summary>
-        /// 글타래
-        /// </summary>
-        public IList<Thread> Threads { get; set; }
-
-        /// <summary>
         /// 사회자
         /// </summary>
         public IList<Member> Moderators { get; set; }

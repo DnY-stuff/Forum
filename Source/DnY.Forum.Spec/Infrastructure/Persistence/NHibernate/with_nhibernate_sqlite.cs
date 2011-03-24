@@ -1,7 +1,6 @@
 ﻿namespace DnY.Forum.Infrastructure.Persistence.NHibernate
 {
     using DnY.Forum.Persistence.NHibernate;
-    using DnY.Forum.Persistence.NHibernate.Utils;
     using Rhino.Commons;
     using Rhino.Commons.ForTesting;
     using Machine.Specifications;

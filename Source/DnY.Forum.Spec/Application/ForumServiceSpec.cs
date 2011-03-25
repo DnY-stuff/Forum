@@ -99,13 +99,13 @@ namespace DnY.Forum.Application
     public class with_forum_service : SpecificationFor<ForumService>
     {
         protected static Mock<IForumRepository> ForumRepository;
-        protected static Mock<IMemberRepository> MemberRepository;
+        protected static Mock<IUserRepository> UserRepository;
         protected static Mock<IAuthorityService> AuthorityService;
 
         public with_forum_service()
         {
             ForumRepository = AutoMocker.Get<IForumRepository>();
-            MemberRepository = AutoMocker.Get<IMemberRepository>();
+            UserRepository = AutoMocker.Get<IUserRepository>();
             AuthorityService = AutoMocker.Get<IAuthorityService>();
         }
     }

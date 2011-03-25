@@ -26,7 +26,7 @@ namespace DnY.Forum.Domain.Model
         /// <summary>
         /// 작성자
         /// </summary>
-        public Member Writer { get; set; }
+        public User Writer { get; set; }
 
         /// <summary>
         /// 생성일
@@ -44,7 +44,7 @@ namespace DnY.Forum.Domain.Model
         /// <param name="title">제목</param>
         /// <param name="content">본문</param>
         /// <param name="writer">작성자</param>
-        public Post(string title, string content, Member writer)
+        public Post(string title, string content, User writer)
         {
             if (string.IsNullOrEmpty(title))
                 throw new ArgumentNullException(title, "글의 제목은 반드시 존재해야 합니다.");

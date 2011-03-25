@@ -5,32 +5,32 @@ namespace DnY.Forum.Application
 {
     public class AccountService : IAccountService
     {
-        private IMemberRepository _memberRepository { get; set; }
+        private IUserRepository UserRepository { get; set; }
 
-        public AccountService(IMemberRepository memberRepository)
+        public AccountService(IUserRepository userRepository)
         {
-            _memberRepository = memberRepository;
+            UserRepository = userRepository;
         }
 
         #region Implementation of IAccountService
 
         /// <summary>
-        /// 새로운 계정을 생성합니다.
+        /// 새로운 사용자를 생성합니다.
         /// </summary>
         /// <param name="email">이메일주소</param>
         /// <param name="password">패스워드</param>
-        /// <param name="name">계정이름</param>
-        /// <returns>생성된 계정 </returns>
-        public Member CreateAccount(string email, string password, string name)
+        /// <param name="name">사용자이름</param>
+        /// <returns>생성된 사용자</returns>
+        public User CreateUser(string email, string password, string name)
         {
             throw new NotImplementedException();
         }
 
         /// <summary>
-        /// 계정을 삭제합니다.
+        /// 사용자를 삭제합니다.
         /// </summary>
-        /// <param name="member">삭제하려는 계정</param>
-        public void RemoveAccount(Member member)
+        /// <param name="user">삭제하려는 사용자</param>
+        public void RemoveUser(User user)
         {
             throw new NotImplementedException();
         }
@@ -41,8 +41,8 @@ namespace DnY.Forum.Application
         /// <remarks>Login Process와 동일합니다.</remarks>
         /// <param name="email">이메일주소</param>
         /// <param name="password">패스워드</param>
-        /// <returns>서명된 계정</returns>
-        public Member SignIn(string email, string password)
+        /// <returns>서명된 사용자</returns>
+        public User SignIn(string email, string password)
         {
             throw new NotImplementedException();
         }
@@ -50,9 +50,9 @@ namespace DnY.Forum.Application
         /// <summary>
         /// 포럼이용 중지를 위해 서명합니다.
         /// </summary>
-        /// <param name="member">서명할 계정</param>
+        /// <param name="user">서명할 사용자</param>
         /// <remarks>Logout Process와 동일합니다.</remarks>
-        public void SignOut(Member member)
+        public void SignOut(User user)
         {
             throw new NotImplementedException();
         }

@@ -16,14 +16,14 @@ namespace DnY.Forum.Application
         /// <param name="title">제목</param>
         /// <param name="description">설명</param>
         /// <returns>생성된 포럼</returns>
-        Forum CreateForum(Member creator, string title, string description);
+        Forum CreateForum(User creator, string title, string description);
 
         /// <summary>
         /// 포럼을 삭제합니다.
         /// </summary>
         /// <param name="eraser">삭제자</param>
         /// <param name="forumId">포럼 Id</param>
-        void DeleteForum(Member eraser, Guid forumId);
+        void DeleteForum(User eraser, Guid forumId);
 
         /// <summary>
         /// 모든 포럼을 조회합니다.
@@ -54,7 +54,7 @@ namespace DnY.Forum.Application
         /// <param name="content">본문</param>
         /// <param name="description">설명</param>
         /// <returns>생성된 글타래</returns>
-        Thread CreateNewThread(Member creator, Forum forum, string title, string content, string description);
+        Thread CreateNewThread(User creator, Forum forum, string title, string content, string description);
 
         /// <summary>
         /// 글타래에 답변합니다.
@@ -64,7 +64,7 @@ namespace DnY.Forum.Application
         /// <param name="title">제목</param>
         /// <param name="content">본문</param>
         /// <returns>글타래</returns>
-        Thread ReplyThread(Member replier, Thread thread, string title, string content);
+        Thread ReplyThread(User replier, Thread thread, string title, string content);
 
         /// <summary>
         /// 글을 수정합니다.
@@ -75,7 +75,7 @@ namespace DnY.Forum.Application
         /// <param name="title">제목</param>
         /// <param name="content">본문</param>
         /// <returns>글타래</returns>
-        Thread ModifyPost(Member modifier, Thread thread, Guid postId, string title, string content);
+        Thread ModifyPost(User modifier, Thread thread, Guid postId, string title, string content);
 
         /// <summary>
         /// 글타래를 원하는 포럼으로 이동시킵니다.
@@ -83,6 +83,6 @@ namespace DnY.Forum.Application
         /// <param name="moderator">중재자</param>
         /// <param name="thread">글타래</param>
         /// <param name="forumToMove">이동시킬 포럼</param>
-        void MoveThreadToForum(Member moderator, Thread thread, Forum forumToMove);
+        void MoveThreadToForum(User moderator, Thread thread, Forum forumToMove);
     }
 }

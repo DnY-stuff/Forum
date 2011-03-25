@@ -24,7 +24,7 @@ namespace DnY.Forum.Web.Controllers
         }
 
         /// <summary>
-        /// 계정을 생성합니다.
+        /// 사용자를 생성합니다.
         /// </summary>
         /// <returns></returns>
         public ActionResult Create()
@@ -33,11 +33,11 @@ namespace DnY.Forum.Web.Controllers
         }
 
         /// <summary>
-        /// 계정을 생성합니다.
+        /// 사용자를 생성합니다.
         /// </summary>
         /// <param name="email">이메일주소</param>
         /// <param name="password">패스워드</param>
-        /// <param name="name">계정이름</param>
+        /// <param name="name">사용자이름</param>
         /// <returns></returns>
         [AcceptVerbs(HttpVerbs.Post)]
         public ActionResult Create(string email, string password, string name)
@@ -46,7 +46,7 @@ namespace DnY.Forum.Web.Controllers
         }
 
         /// <summary>
-        /// 계정을 삭제합니다.
+        /// 사용자를 삭제합니다.
         /// </summary>
         /// <param name="userId">사용자 Id</param>
         /// <returns></returns>

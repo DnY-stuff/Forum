@@ -6,17 +6,17 @@
   <Comment CommentText="Forum Aggregate">
     <Position X="4.865" Y="0.573" Height="0.291" Width="1.294" />
   </Comment>
-  <Comment CommentText="Member Aggregate">
-    <Position X="1.344" Y="0.542" Height="0.291" Width="1.387" />
+  <Comment CommentText="User Aggregate">
+    <Position X="1.344" Y="0.542" Height="0.291" Width="1.127" />
   </Comment>
-  <Class Name="DnY.Forum.Domain.Model.Member">
+  <Class Name="DnY.Forum.Domain.Model.User">
     <Position X="1.25" Y="1" Width="1.5" />
     <Compartments>
       <Compartment Name="Methods" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
       <HashCode>AAACAAAAASAAAAAEgAAAAAQAAAAAAIACAQABAAAAAAA=</HashCode>
-      <FileName>Model\Account\Member.cs</FileName>
+      <FileName>Model\Account\User.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DnY.Forum.Domain.Model.Forum">

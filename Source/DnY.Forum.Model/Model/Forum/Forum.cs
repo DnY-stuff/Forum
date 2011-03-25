@@ -27,7 +27,7 @@ namespace DnY.Forum.Domain.Model
         /// <summary>
         /// 사회자
         /// </summary>
-        public IList<Member> Moderators { get; set; }
+        public IList<User> Moderators { get; set; }
 
         /// <summary>
         /// 생성일
@@ -45,7 +45,7 @@ namespace DnY.Forum.Domain.Model
         /// <param name="title">제목</param>
         /// <param name="moderators">사회자</param>
         /// <param name="description">설명</param>
-        public Forum(string title, IList<Member> moderators, string description)
+        public Forum(string title, IList<User> moderators, string description)
         {
             if (string.IsNullOrEmpty(title))
                 throw new ArgumentNullException("title", "포럼의 제목은 반드시 존재해야 합니다.");
@@ -70,7 +70,7 @@ namespace DnY.Forum.Domain.Model
         /// </summary>
         /// <param name="title">제목</param>
         /// <param name="moderators">사회자</param>
-        public Forum(string title, IList<Member> moderators) : this(title, moderators, string.Empty)
+        public Forum(string title, IList<User> moderators) : this(title, moderators, string.Empty)
         {
         }
 

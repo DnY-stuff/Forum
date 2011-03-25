@@ -10,9 +10,9 @@ namespace DnY.Forum.Domain.Model
     {
         Establish context = () =>
                                 {
-                                    OriginalPostWriter = new Member("dkshin67@gmail.com", "password", "Dongkyu Shin");
+                                    OriginalPostWriter = new User("dkshin67@gmail.com", "password", "Dongkyu Shin");
                                     OriginalPost = new Post("환영합니다.", "blah~blah~blah~blah~blah~", OriginalPostWriter);
-                                    CurrentForum = new Forum("임시 포럼", new List<Member> { new Member("administrator@dny.com", "password", "Administrator") });
+                                    CurrentForum = new Forum("임시 포럼", new List<User> { new User("administrator@dny.com", "password", "Administrator") });
                                 };
 
         Because of = () => NewThread = new Thread(OriginalPost, CurrentForum);
@@ -22,7 +22,7 @@ namespace DnY.Forum.Domain.Model
 
         private static Thread NewThread;
         private static Post OriginalPost;
-        private static Member OriginalPostWriter;
+        private static User OriginalPostWriter;
         private static Forum CurrentForum;
     }
 
@@ -35,6 +35,6 @@ namespace DnY.Forum.Domain.Model
         It should_be_the_content_of_more_than_10_characters = () => NewPost.Content.Length.ShouldBeGreaterThanOrEqualTo(10);
         
         private static Post NewPost;
-        private static Member Writer;
+        private static User Writer;
     }
 }

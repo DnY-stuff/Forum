@@ -7,15 +7,15 @@ namespace DnY.Forum.Application
     public class ForumService : IForumService
     {
         protected IForumRepository _forumRepository { get; set; }
-        protected IMemberRepository _memberRepository { get; set; }
+        protected IUserRepository UserRepository { get; set; }
         protected IAuthorityService _authorityService { get; set; }
 
         public ForumService(IForumRepository forumRepository,
-                            IMemberRepository memberRepository,
+                            IUserRepository userRepository,
                             IAuthorityService authorityService)
         {
             _forumRepository = forumRepository;
-            _memberRepository = memberRepository;
+            UserRepository = userRepository;
             _authorityService = authorityService;
         }
 
@@ -28,7 +28,7 @@ namespace DnY.Forum.Application
         /// <param name="title">제목</param>
         /// <param name="description">설명</param>
         /// <returns>생성된 포럼</returns>
-        public Forum CreateForum(Member creator, string title, string description)
+        public Forum CreateForum(User creator, string title, string description)
         {
             throw new NotImplementedException();
         }
@@ -38,7 +38,7 @@ namespace DnY.Forum.Application
         /// </summary>
         /// <param name="eraser">삭제자</param>
         /// <param name="forumId">포럼 Id</param>
-        public void DeleteForum(Member eraser, Guid forumId)
+        public void DeleteForum(User eraser, Guid forumId)
         {
             throw new NotImplementedException();
         }
@@ -81,7 +81,7 @@ namespace DnY.Forum.Application
         /// <param name="content">본문</param>
         /// <param name="description">설명</param>
         /// <returns>생성된 글타래</returns>
-        public Thread CreateNewThread(Member creator, Forum forum, string title, string content, string description)
+        public Thread CreateNewThread(User creator, Forum forum, string title, string content, string description)
         {
             throw new NotImplementedException();
         }
@@ -94,7 +94,7 @@ namespace DnY.Forum.Application
         /// <param name="title">제목</param>
         /// <param name="content">본문</param>
         /// <returns>글타래</returns>
-        public Thread ReplyThread(Member replier, Thread thread, string title, string content)
+        public Thread ReplyThread(User replier, Thread thread, string title, string content)
         {
             throw new NotImplementedException();
         }
@@ -108,7 +108,7 @@ namespace DnY.Forum.Application
         /// <param name="title">제목</param>
         /// <param name="content">본문</param>
         /// <returns>글타래</returns>
-        public Thread ModifyPost(Member modifier, Thread thread, Guid postId, string title, string content)
+        public Thread ModifyPost(User modifier, Thread thread, Guid postId, string title, string content)
         {
             throw new NotImplementedException();
         }
@@ -119,7 +119,7 @@ namespace DnY.Forum.Application
         /// <param name="moderator">중재자</param>
         /// <param name="thread">글타래</param>
         /// <param name="forumToMove">이동시킬 포럼</param>
-        public void MoveThreadToForum(Member moderator, Thread thread, Forum forumToMove)
+        public void MoveThreadToForum(User moderator, Thread thread, Forum forumToMove)
         {
             throw new NotImplementedException();
         }

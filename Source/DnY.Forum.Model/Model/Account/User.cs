@@ -4,9 +4,9 @@ namespace DnY.Forum.Domain.Model
     using Infrastructure.Builders;
 
     /// <summary>
-    /// 멤버
+    /// 사용자
     /// </summary>
-    public class Member
+    public class User
     {
         /// <summary>
         /// Id
@@ -29,9 +29,9 @@ namespace DnY.Forum.Domain.Model
         public string Name { get; set; }
 
         /// <summary>
-        /// 멤버타입
+        /// 사용자타입
         /// </summary>
-        public MemberType Type { get; set; }
+        public UserType Type { get; set; }
 
         /// <summary>
         /// 생성일
@@ -46,16 +46,16 @@ namespace DnY.Forum.Domain.Model
         /// <summary>
         /// 생성자
         /// </summary>
-        public Member(string emailaddress, string password, string name)
+        public User(string emailaddress, string password, string name)
         {
             if (string.IsNullOrEmpty(emailaddress))
-                throw new ArgumentNullException("emailaddress", "계정은 반드시 이메일주소가 요구됩니다.");
+                throw new ArgumentNullException("emailaddress", "사용자는 반드시 이메일주소가 요구됩니다.");
 
             if (string.IsNullOrEmpty(password))
-                throw new ArgumentNullException("password", "계정은 반드시 비밀번호가 요구됩니다.");
+                throw new ArgumentNullException("password", "사용자는 반드시 비밀번호가 요구됩니다.");
 
             if (string.IsNullOrEmpty(name))
-                throw new ArgumentNullException("name", "계정은 반드시 성명이 요구됩니다.");
+                throw new ArgumentNullException("name", "사용자는 반드시 성명이 요구됩니다.");
 
 
             // TODO : ORM 연계시, 수정되어야 합니다.
@@ -64,7 +64,7 @@ namespace DnY.Forum.Domain.Model
             Email = emailaddress;
             Password = password;
             Name = name;
-            Type = MemberType.Member;
+            Type = UserType.Member;
 
             CreateDate = DateTime.Now;
             UpdateDate = DateTime.Now;
@@ -81,7 +81,7 @@ namespace DnY.Forum.Domain.Model
                 return false;
             }
 
-            return Id.Equals(((Member)obj).Id);
+            return Id.Equals(((User)obj).Id);
         }
 
         public override int GetHashCode()

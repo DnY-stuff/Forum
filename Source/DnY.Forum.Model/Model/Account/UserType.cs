@@ -3,17 +3,17 @@ namespace DnY.Forum.Domain.Model
     using System;
 
     /// <summary>
-    /// 멤버 타입
+    /// 사용자 타입
     /// </summary>
     [Flags]
-    public enum MemberType
+    public enum UserType
     {
         /// <summary>
         /// 손님
         /// </summary>
         Guest = 0x0001,
         /// <summary>
-        /// 일반멤버
+        /// 멤버
         /// </summary>
         Member = Guest | 0x0002,
         /// <summary>
